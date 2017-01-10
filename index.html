@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Waydrow</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript">
+    addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+    }, false);
+
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
+    </script>
+    <!--<link href="public/css/style.css" rel='stylesheet' type='text/css' />-->
+    <link rel="stylesheet" href="public/css/style.css">
+</head>
+
+<body>
+    <script>
+    $(document).ready(function(c) {
+//         $('.close').on('click', function(c){
+//         	$('.login-form').fadeOut('slow', function(c){
+//           		$('.login-form').remove();
+//         	});
+//         });
+    });
+    </script>
+    <!--SIGN UP-->
+    <h1>计算机网络课程实验</h1>
+    <div class="login-form">
+         <!--<div class="close"> </div>-->
+        <div class="head-info">
+            <label class="lbl-1"> </label>
+            <label class="lbl-2"> </label>
+            <label class="lbl-3"> </label>
+        </div>
+        <div class="clear"> </div>
+        <div class="avtar">
+            <img src="public/images/avatar.png" />
+        </div>
+        <form action="cgi-bin/login.php" method="post" onsubmit="return check()">
+            <input type="text" class="text" name="username" id="username" placeholder="用户名">
+            <div class="key">
+                <input type="password" name="num" id="num" placeholder="学号">
+            </div>
+            <div class="signin">
+                <input type="submit" value="POST">
+            </div>
+        </form>
+    </div>
+    <div class="copy-rights">
+        <p>Copyright &copy; 2017.Waydrow All rights reserved. - By <a href="http://blog.waydrow.com" title="Waydrow" target="_blank">Waydrow</a></p>
+    </div>
+
+    <script src="public/js/jquery-1.11.3.min.js"></script>
+    <script>
+
+        function check() {
+            var username = $('#username').val().trim();
+            var num = $('#num').val().trim();
+
+            if(username == "") {
+                alert('用户名不允许为空 !');
+                return false
+            } else if(num == "") {
+                alert("简介不允许为空 !");
+                return false;
+            } else {
+                $('#username').value = username;
+                $('#num').value = num;
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

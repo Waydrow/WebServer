@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index Page</title>
+</head>
+<body>
+    <p>Index page</p>
+    <form action="admin/calc.py" method="get" onsubmit="return check()">
+        <p>number 1 <input type="text" id="a" name = 'a'></p>
+        <p>number 2 <input type="text" id="b" name = 'b'></p>
+        <button type="submit">加法</button>
+    </form>
+
+
+    <script src="public/jquery-1.11.3.min.js"></script>
+    <script>
+
+        /*检查a,b填写是否为空*/
+        function check() {
+            var a = $('#a').val().trim();
+            var b = $('#b').val().trim();
+
+            if(a == "") {
+                alert('a的值不允许为空 !');
+                return false
+            } else if(b == "") {
+                alert("b的值不允许为空 !");
+                return false;
+            } else {
+                $('#a').value = a;
+                $('#b').value = b;
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
